@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<style type="text/css">
+	#navi { width:1200px; height:120px; position:relative;}
+	.navi_main { width:1200px; height:120px; position:relative; }
+	.navi_sub_1 { display:block; position:absolute; background:url(/images/rk-0052/common/sub1_bg.gif) no-repeat; padding:13px 0 0 25px; vertical-align:middle; height:31px; width:208px; top:34px;}
+	.navi_sub_1 a{padding-right:12px;} 
+	.navi_sub_2 { display:block; position:absolute; background:url(/images/rk-0052/common/sub2_bg.gif) no-repeat; padding:13px 0 0 25px; vertical-align:middle; height:31px; width:334px; top:34px; left:150px;}
+	.navi_sub_2 a{padding-right:12px;} 
+	.navi_sub_3 { display:block; position:absolute; background:url(/images/rk-0052/common/sub3_bg.gif) no-repeat; padding:13px 0 0 25px; vertical-align:middle; height:31px; width:227px; top:34px; left:395px;}
+	.navi_sub_3 a{padding-right:12px;} 
+	.navi_sub_4 { display:block; position:absolute; background:url(/images/rk-0052/common/sub4_bg.gif) no-repeat; padding:13px 0 0 25px; vertical-align:middle; height:31px; width:388px; top:34px; left:520px;}
+	.navi_sub_4 a{padding-right:12px;} 
+	.navi_sub_5 { display:block; position:absolute; background:url(/images/rk-0052/common/sub5_bg.gif) no-repeat; padding:13px 0 0 25px; vertical-align:middle; height:31px; width:146px; top:34px; left:760px;}
+	.navi_sub_5 a{padding-right:12px;} 
+</style>
+
+<div id="navi">
+	<div class="navi_main">
+	<%
+		Object userId = session.getAttribute("loginId");
+	%>
+		<a href="/"><img src="/images/home.jpg" alt="Home" class='navi_main_obj' subcode='1' oversrc='/images/rk-0052/common/navi_1_on.gif' />Home</a>
+		<%
+			if(userId == null) {
+		%>
+		<a href="/login.jsp"><img src="/images/login.jpg" alt="로그인" class='navi_main_obj' subcode='2' oversrc='/images/rk-0052/common/navi_2_on.gif'/>로그인</a>
+		<a href="/form.jsp"><img src="/images/join.jpg" alt="회원가입" class='navi_main_obj' subcode='3' oversrc='/images/rk-0052/common/navi_3_on.gif'/>회원가입</a>
+		<%
+			} else {
+		%>
+		<a href="/users/LogoutServlet"><img src="/images/logout.jpg" alt="로그아웃" class='navi_main_obj' subcode='4' oversrc='/images/rk-0052/common/navi_4_on.gif'/>로그아웃</a>
+		<a href="/user/UpdateFormUserServlet"><img src="/images/modify.jpg" alt="개인정보수정" class='navi_main_obj' subcode='5' oversrc='/images/rk-0052/common/navi_5_on.gif'/>개인정보수정</a>
+		<%
+			}
+		%>
+	</div>
+</div>

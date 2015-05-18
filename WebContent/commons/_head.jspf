@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+
+<tr>
+	<td id="logo" valign="top">
+		<div id="L_SITE_LOGO">
+			<table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td align="center" height="70">
+						<a href="/"><img src="/images/ugcCAGHJC57wertqf.jpg" border="0" ></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</td>
+	<td align="right" valign="top" style="padding-top:10px">	
+
+ 		<a href="/"><img src="/images/home.jpg" alt="홈으로"></a>
+		<a href="/login.jsp"><img src="/images/login.jpg" alt="로그인"></a>
+		<a href="/form.jsp"><img src="/images/join.jpg" alt="회원가입"></a>
+		<a href="/users/LogoutServlet"><img src="/images/logout.jpg" alt="로그아웃"></a>
+		<a href="/user/UpdateFormUserServlet"><img src="/images/modify.jpg" alt="개인정보수정"></a>
+
+		<!--&nbsp;<a href="#"><img src="/images/rk-0052/common/top_chi.gif" alt="chinese"></a>-->
+	</td>
+</tr>
