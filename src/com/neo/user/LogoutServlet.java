@@ -22,7 +22,8 @@ public class LogoutServlet extends HttpServlet {
     public LogoutServlet() {
         super();
         // TODO Auto-generated constructor stub
-    }
+    }  
+    
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,6 +31,7 @@ public class LogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		// very hard
 		doPost(request, response);
 	}
 
