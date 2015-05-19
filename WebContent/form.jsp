@@ -29,28 +29,40 @@
 				</div>
 				
 				<form class="form-horizontal" action="/users/CreateUserServlet" method="post">
+					<%
+						Object errorMessage = request.getAttribute("errorMessage");
+						if(errorMessage != null) {
+					%>
+					<div class="control-group">
+						<label class="error"> <%= errorMessage %></label>
+					</div>						
+					<% 		
+						} 
+					%>
+					<div></div>
+					<br>
 					<div class="control-group">
 						<label class="control-label" for="userId">사용자 아이디</label>
 						<div class="controls">
-							<input type="text" name="userId" value="" />							
+							<input type="text" name="userId" value="${user.userId}" />							
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="password">비밀번호</label>
 						<div class="controls">
-							<input type="password" id="password" name="password" placeholder="" />							
+							<input type="password" id="password" name="password" value="${user.password}"placeholder="" />							
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="name">이름</label>
 						<div class="controls">
-							<input type="text" id="name" name="name" placeholder="" />							
+							<input type="text" id="name" name="name" value="${user.name}"placeholder="" />							
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="email">이메일</label>
 						<div class="controls">
-							<input type="text" id="email" name="email" placeholder="" />								
+							<input type="text" id="email" name="email" value="${user.email}" placeholder="" />								
 						</div>
 					</div>
 					<div class="control-group">

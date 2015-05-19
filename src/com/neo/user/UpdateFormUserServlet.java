@@ -36,6 +36,8 @@ public class UpdateFormUserServlet extends HttpServlet {
 			return;
 		}
 		
+		
+		
 		String loginId = (String) userId;
 		
 		UserDao userDao = new UserDao();

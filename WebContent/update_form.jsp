@@ -32,6 +32,17 @@
 
 				
 				<form class="form-horizontal" action="/users/UpdateUserServlet" method="post">
+					<%
+						Object errorMessage = request.getAttribute("errorMessage");
+						if(errorMessage != null) {
+					%>
+					<div class="control-group">
+						<label class="error"> <%= errorMessage %></label>
+					</div>						
+					<% 		
+						} 
+					%>
+
 					<input type="hidden" name="userId" value="${user.userId }" />
 					<div class="control-group">
 						<label class="control-label" for="userId">사용자 아이디</label>
